@@ -1,3 +1,6 @@
 <p>employee name: {{name}}</p>
 <p>age: {{getAge()>18?'You can work':'You cant work here'}}</p>
 <!-- you can use ternary operator with your text interpolation-->
+<p>Your company is: {{company.value}}</p>
+Type your company: <input type="text" (keyup)="company.value" #company>
+<br>
