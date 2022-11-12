@@ -12,4 +12,9 @@ Using the terminal
  Type this command ng g c nameOfTheComponent
 You need to declare all your component on app.module.ts , name in declarations and import on top of the file.
 
+Inline component from the Terminal
+ng g c nameOfTheComponent -s -t
+
+
+
 
