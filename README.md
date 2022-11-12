@@ -15,6 +15,8 @@ You need to declare all your component on app.module.ts , name in declarations a
 Inline component from the Terminal
 ng g c nameOfTheComponent -s -t
 
+Text interpolation
+On the html component you can use logic from your ts component with {{}}
 
 
 

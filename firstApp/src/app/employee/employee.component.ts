@@ -10,6 +10,14 @@ styleUrls: ['./employee.component.css']
 //this way you can write an inline component only if you app is very simple and avoid use the css and html component.
 export class EmployeeComponent implements OnInit {
 
+  name:string='Vicente';
+  private age:number=33;
+
+  public getAge():number{
+    return this.age;
+  }
+
+
   constructor() { }
 
   ngOnInit(): void {
