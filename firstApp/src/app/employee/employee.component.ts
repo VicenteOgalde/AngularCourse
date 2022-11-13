@@ -13,6 +13,13 @@ export class EmployeeComponent implements OnInit {
   name:string='Vicente';
   private age:number=33;
 
+  inputProperty:boolean=false; //property binding with html component
+  registerUser:boolean=false;
+
+  getRegisterUser(){
+    this.registerUser=true;
+  }
+
   public getAge():number{
     return this.age;
   }
