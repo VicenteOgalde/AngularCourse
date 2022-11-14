@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { EmployeesComponent } from './employees/employees.component';
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,7 @@ import { EmployeeComponent } from './employee/employee.component';
   ],
   imports: [
   
-  BrowserModule
+  BrowserModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
