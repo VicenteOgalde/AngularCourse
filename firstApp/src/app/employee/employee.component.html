@@ -4,7 +4,8 @@
 <p>Your company is: {{company.value}}</p>
 Type your company: <input type="text" (keyup)="company.value" #company [disabled]="inputProperty">
 <br>
-
-Register: <input type="checkbox" id="register" [checked]="registerUser">
+{{registerText}}<br>
+Register: <input type="radio" value="yes" name="xRegister" id="register" [checked]="registerUser"(click)="setRegisterUser($event)">
+Not Register: <input type="radio" value='no' name="xRegister" (click)="setRegisterUser($event)" ><!--taking the event to the function-->
 {{getRegisterUser()}}
 

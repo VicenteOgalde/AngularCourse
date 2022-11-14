@@ -16,8 +16,19 @@ export class EmployeeComponent implements OnInit {
   inputProperty:boolean=false; //property binding with html component
   registerUser:boolean=false;
 
+  registerText:string='Zero registers';
+
   getRegisterUser(){
     this.registerUser=true;
+  }
+  setRegisterUser(event:Event){//taking the event from the input 
+    //alert("register user ok")
+    if((<HTMLInputElement>event.target).value=='yes'){//casting the html element
+      this.registerText='register user ok';
+    }else{
+      this.registerText='Not register';
+    }
+    
   }
 
   public getAge():number{
