@@ -12,7 +12,16 @@ export class AppComponent {
   result:number=0;
 
   public sum():void{
-    this.result=this.number1+this.number2;
+    this.result=Number(this.number1)+Number(this.number2);
+  }
+  public subtract():void{
+    this.result=Number(this.number1)-Number(this.number2);
+  }
+  public multiply():void{
+    this.result=Number(this.number1)*Number(this.number2);
+  }
+  public divide():void{
+    this.result=Number(this.number1)/Number(this.number2);
   }
 
 

@@ -3,12 +3,17 @@
 
 </head>
 <body>
+  <div class="container">
   <h1>{{title}}</h1>
   <form>
-    Number 1:<input type="text" name="number1" [(ngModel)]="number1"><br/><br/>
-    Number 2:<input type="text" name="number2" [(ngModel)]="number2"><br/><br/>
-    <input type="submit" value="Sum" (click)="sum()"> 
+    <label>Number 1:</label><input type="text" name="number1" [(ngModel)]="number1"><br/><br/>
+    <label>Number 2:</label><input type="text" name="number2" [(ngModel)]="number2"><br/><br/>
+    <input class="btn btn-primary" type="submit" value="+" (click)="sum()"> 
+    <input class="btn btn-primary" type="submit" value="-" (click)="subtract()"> 
+    <input class="btn btn-primary" type="submit" value="*" (click)="multiply()"> 
+    <input class="btn btn-primary" type="submit" value="/" (click)="divide()"> 
     <br/><br/><input value="{{result}}" disabled>
 
   </form>
+</div>
 </body>
