@@ -1,0 +1,14 @@
+<h1 style="text-align: center;">{{title}}</h1>
+
+<form style="text-align: center;">
+  <label>Name</label>
+  <input type="text" name="name" [(ngModel)]="name">
+  <label>Surname</label>
+  <input type="text" name="surname" [(ngModel)]="surname">
+
+  <input type="submit" (click)="userRegister()" value="Register">
+
+
+</form>
+<br>
+<p *ngIf="message !=''">{{message}} {{name}} {{surname}}</p><!--check if our message is not empty then show our message, with ngif directive-->
