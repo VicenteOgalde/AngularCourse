@@ -7,7 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class EmployeeChildComponent implements OnInit {
 
-  @Output() featuresEmployee= new EventEmitter<string>();
+  @Output() featuresEmployee= new EventEmitter<string>();//export event to other component
 
   constructor() { }
 

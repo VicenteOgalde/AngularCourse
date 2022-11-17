@@ -9,7 +9,7 @@ import { Employee } from './../employee.model';
 })
 export class EmployeeComponent implements OnInit {
 
-  @Input() employeeIterate:Employee;
+  @Input() employeeIterate:Employee;//import from the html component to other component
   @Input() index:number;
   featuresArray=[''];
   constructor() { }
