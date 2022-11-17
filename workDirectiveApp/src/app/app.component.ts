@@ -13,11 +13,15 @@ export class AppComponent {
   message:string='';
   name:string='';
   surname:string='';
+  position:string='';
+  booleanRegister:boolean=false;
 
 
 
   public userRegister():void{
-    this.users.push({Name:this.name},{Surname:this.surname});
+    this.booleanRegister=true;
+    this.users.push({Name:this.name},{Surname:this.surname},
+      {Position:this.position});
     this.message='successful register';
   }
 }

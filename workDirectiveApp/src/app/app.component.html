@@ -5,16 +5,23 @@
   <input type="text" name="name"  [(ngModel)]="name">
   <label>Surname</label>
   <input type="text" name="surname"  [(ngModel)]="surname">
-
+  <label>Position</label>
+  <input type="text" name="position"  [(ngModel)]="position">
   <input type="submit" (click)="userRegister()" value="Register">
 
 
 </form>
+
 <br>
 <p *ngIf=" message !=''; else noRegister">{{message}} {{name}} {{surname}}</p><!--check if our message is not empty then show our message, with ngif directive-->
 <ng-template #noRegister><!-- for using else you need to create a ng-template-->
   <p>zero register</p>
 </ng-template>
+<br><br>
+<h3 *ngIf="booleanRegister">{{name}} {{surname}} with position   <span [ngClass]="{forPresident:position=='president'}">{{position}}</span> has been successfully registered</h3><!--using ternary operator for change color of the variable position using ngStyle <span [ngStyle]="{color:position=='president'?'red':'black'}">{{position}}</span>-->
+
+<!--ngClass use the css sheet for create a new class with custom styles-->
+
 <br>
 <ul *ngFor="let user of users ">
   <li *ngFor="let userAux of user | keyvalue">{{userAux.key}} {{userAux.value}} </li> <!-- using for iterate and array of objects-->
