@@ -10,8 +10,8 @@
   <input type="submit" (click)="registerEmployee()">
 
 </form>
-<br><br>
+<br>
+<app-employee *ngFor="let employee of employees; let i=index;" [employeeIterate]="employee" [index]="i"></app-employee>
+<br>
 
-      <div *ngFor="let employee of employees; let i=index;">
-       {{i+1}} {{employee.name}} {{employee.surname}} {{employee.position}} {{employee.salary}}
-      </div>
+
