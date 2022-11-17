@@ -1,3 +1,5 @@
 <div >
     {{index+1}} {{employeeIterate.name}} {{employeeIterate.surname}} {{employeeIterate.position}} {{employeeIterate.salary}}
    </div>
+<app-employee-child (featuresEmployee)="addFeature($event)"> </app-employee-child>
+<p *ngFor="let feature of featuresArray">{{feature}}</p>

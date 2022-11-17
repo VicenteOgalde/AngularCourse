@@ -11,10 +11,16 @@ export class EmployeeComponent implements OnInit {
 
   @Input() employeeIterate:Employee;
   @Input() index:number;
-
+  featuresArray=[''];
   constructor() { }
 
   ngOnInit(): void {
+  }
+  
+
+  addFeature(newFeature:string){
+    this.featuresArray.push(newFeature);
+
   }
 
 }
