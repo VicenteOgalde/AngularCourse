@@ -18,5 +18,6 @@ ng g c nameOfTheComponent -s -t
 Text interpolation
 On the html component you can use logic from your ts component with {{}}
 
-
+Create Service
+On the terminal type (ng g s nameOfTheService)
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Employee } from './employee.model';
+import { EmployeeServiceService } from './employee-service.service';
 
 
 @Component({
@@ -13,6 +14,7 @@ export class AppComponent {
   surname:string='';
   position:string='';
   salary:number=0;
+  constructor(private meService:EmployeeServiceService){}
 
   employees:Employee[]=[
     new Employee('jose','mujica','president',8000),
@@ -20,6 +22,7 @@ export class AppComponent {
     new Employee('sol','moon','admin',5100)
   ];
   public registerEmployee():void{
+    this.meService.showOkMessage(`Employee ${this.name} with position ${this.position} added` )
     this.employees.push(new Employee(this.name,this.surname,this.position,Number(this.salary)));
 
   }

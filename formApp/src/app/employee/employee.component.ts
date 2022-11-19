@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Employee } from './../employee.model';
 
 
+
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
@@ -11,6 +12,7 @@ export class EmployeeComponent implements OnInit {
 
   @Input() employeeIterate:Employee;//import from the html component to other component
   @Input() index:number;
+
   featuresArray=[''];
   constructor() { }
 
@@ -19,6 +21,7 @@ export class EmployeeComponent implements OnInit {
   
 
   addFeature(newFeature:string){
+    
     this.featuresArray.push(newFeature);
 
   }
