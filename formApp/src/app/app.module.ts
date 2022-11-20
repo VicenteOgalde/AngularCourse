@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeChildComponent } from './employee-child/employee-child.component';
 import { EmployeeServiceService } from './employee-service.service';
+import { EmployeeArrayService } from './employeeArray.service';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,12 @@ import { EmployeeServiceService } from './employee-service.service';
   imports: [
 
 
+
   BrowserModule,
     BrowserAnimationsModule,
     FormsModule
   ],
-  providers: [EmployeeServiceService],
+  providers: [EmployeeServiceService, EmployeeArrayService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

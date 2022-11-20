@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Employee } from './employee.model';
 import { EmployeeServiceService } from './employee-service.service';
+import { EmployeeArrayService } from './employeeArray.service';
 
 
 @Component({
@@ -14,16 +15,17 @@ export class AppComponent {
   surname:string='';
   position:string='';
   salary:number=0;
-  constructor(private meService:EmployeeServiceService){}
 
-  employees:Employee[]=[
-    new Employee('jose','mujica','president',8000),
-    new Employee('ana','fox','secretary',3200),
-    new Employee('sol','moon','admin',5100)
-  ];
+  employees:Employee[]=[];
+
+  constructor(private meService:EmployeeServiceService,private serviceArray:EmployeeArrayService){
+    this.employees=serviceArray.employees;
+  }
+
+
   public registerEmployee():void{
     this.meService.showOkMessage(`Employee ${this.name} with position ${this.position} added` )
-    this.employees.push(new Employee(this.name,this.surname,this.position,Number(this.salary)));
+    this.serviceArray.AddEmployeeService(this.name,this.surname,this.position,Number(this.salary));
 
   }
 
