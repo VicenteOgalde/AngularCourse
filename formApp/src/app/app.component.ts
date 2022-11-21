@@ -24,7 +24,7 @@ export class AppComponent {
 
 
   public registerEmployee():void{
-    this.meService.showOkMessage(`Employee ${this.name} with position ${this.position} added` )
+   // this.meService.showOkMessage(`Employee ${this.name} with position ${this.position} added` )
     this.serviceArray.AddEmployeeService(this.name,this.surname,this.position,Number(this.salary));
 
   }
