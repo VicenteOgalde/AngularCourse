@@ -1,1 +1,19 @@
-<p>projects-component works!</p>
+<form>
+    <label>Name</label>
+    <input type="text" name="name" id="name" placeholder="Name" [(ngModel)]="name">
+    <label>Surname</label>
+    <input type="text" name="surname" id="surname" placeholder="Surname" [(ngModel)]="surname">
+    <label>Position</label>
+    <input type="text" name="position" id="position" placeholder="Position" [(ngModel)]="position">
+    <label>Salary</label>
+    <input type="text" name="salary" id="salary" placeholder="Salary" [(ngModel)]="salary">
+    <input type="submit" (click)="registerEmployee()">
+  
+  </form>
+
+
+
+<div style="text-align: center;">
+    <button (click)="backToHome()">To Home</button>
+
+</div>
